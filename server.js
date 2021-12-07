@@ -884,7 +884,10 @@ menu1 = `
 │✯
 ├───「${shp5} MAKER MENU${shp5}」
 │✯
-├ ${shp} ${prefix}nulis 「 text 」
+├ ${shp} ${prefix}foliokiri 「 text 」
+├ ${shp} ${prefix}foliokanan 「 text 」
+├ ${shp} ${prefix}nuliskanan 「 text 」
+├ ${shp} ${prefix}nuliskiri 「 text 」
 ├ ${shp} ${prefix}maker2d2 「 text 」
 ├ ${shp} ${prefix}maker2d3 「 text 」
 ├ ${shp} ${prefix}maker2d4 「 text 」
@@ -966,7 +969,7 @@ switch(command) {
 
 ///OWNER ONLY///
       case 'menu':
-      case 'Rama':
+      case 'tobi':
       case 'mengmenu':
       case 'menghelp':
 		  case 'help':
@@ -1777,43 +1780,43 @@ const listCommand = async (_dir, reply) => {
 					  
   case 'yuri':
 reply(mess.wait)
-kon = (`https://api.dapuhy.ga/api/nsfw/nsfwyuri?apikey=R-BOT`)
+kon = (`https://hardianto-chan.herokuapp.com/api/anime/random?nsfw=yuri&apikey=hardianto`)
 anu = await getBuffer(kon)
 master.sendMessage(from, anu, image, { quoted: god, thumbnail: fakeimg4})
 break
 case 'anal':
 reply(mess.wait)
-aku = (`https://api.dapuhy.ga/api/nsfw/nsfwanal?apikey=R-BOT`)
+aku = (`https://hardianto-chan.herokuapp.com/api/anime/random?nsfw=anal&apikey=hardianto`)
 kon = await getBuffer(aku)
 master.sendMessage(from, kon, image, { quoted: god, thumbnail: fakeimg4})
 break
 case 'lesbian':
 reply(mess.wait)
-kau = (`https://api.dapuhy.ga/api/nsfw/nsfwlesbian?apikey=R-BOT`)
+kau = (`https://hardianto-chan.herokuapp.com/api/anime/random?nsfw=lesbian&apikey=hardianto`)
 kon = await getBuffer(kau)
 master.sendMessage(from, kon, image, { quoted: god, thumbnail: fakeimg4})
 break
 case 'eroneko':
 reply(mess.wait)
-hai = (`https://api.dapuhy.ga/api/nsfw/nsfwnekogif?apikey=R-BOT`)
+hai = (`https://hardianto-chan.herokuapp.com/api/anime/random?nsfw=eroNeko&apikey=hardianto`)
 kon = await getBuffer(hai)
 master.sendMessage(from, kon, image, { quoted: god, thumbnail: fakeimg4})
 break
 case 'bj':
 reply(mess.wait)
-hai = (`https://api.dapuhy.ga/api/nsfw/nsfwbj?apikey=R-BOT`)
+hai = (`https://hardianto-chan.herokuapp.com/api/anime/random?nsfw=bJ&apikey=hardianto`)
 kon = await getBuffer(hai)
 master.sendMessage(from, kon, image, { quoted: god, thumbnail: fakeimg4})
 break
 case 'kitsune':
 reply(mess.wait)
-hai = (`https://api.dapuhy.ga/api/nsfw/nsfwkitsune?apikey=R-BOT`)
+hai = (`https://hardianto-chan.herokuapp.com/api/anime/random?nsfw=kitsune&apikey=hardianto`)
 kon = await getBuffer(hai)
 master.sendMessage(from, kon, image, { quoted: god, thumbnail: fakeimg4})
 break
 case 'pussy':
 reply(mess.wait)
-hai = await getBuffer(`https://api.dapuhy.ga/api/nsfw/nsfwfemdom?apikey=R-BOT`)
+hai = await getBuffer(`https://hardianto-chan.herokuapp.com/api/anime/random?nsfw=pussy&apikey=hardianto`)
 master.sendMessage(from, hai, image, { quoted: god, thumbnail: fakeimg4})
 break
 case 'wallpaper':
@@ -1824,7 +1827,7 @@ master.sendMessage(from, kon, image, { quoted: god, thumbnail: fakeimg4})
 break
 case 'neko2':
 reply(mess.wait)
-hai = (`https://api.dapuhy.ga/api/nsfw/nsfwneko?apikey=R-BOT`)
+hai = (`https://hardianto-chan.herokuapp.com/api/anime/random?sfw=neko&apikey=hardianto`)
 kon = await getBuffer(hai)
 master.sendMessage(from, kon, image, { quoted: god, thumbnail: fakeimg4})
 break
@@ -1842,19 +1845,19 @@ master.sendMessage(from, kon, image, { quoted: god, thumbnail: fakeimg4})
 break
 case 'poke':
 reply(mess.wait)
-hai = (`https://api.dapuhy.ga/api/nsfw/nsfwhentaigif?apikey=R-BOT`)
+hai = (`https://hardianto-chan.herokuapp.com/api/anime/random?sfw=poke&apikey=hardianto`)
 kon = await getBuffer(hai)
 master.sendMessage(from, kon, image, { quoted: god, thumbnail: fakeimg4})
 break
 case 'neko2':
 reply(mess.wait)
-hai = (`https://api.dapuhy.ga/api/nsfw/nsfwnekogif?apikey=R-BOT`)
+hai = (`https://hardianto-chan.herokuapp.com/api/anime/random?sfw=neko&apikey=hardianto`)
 kon = await getBuffer(hai)
 master.sendMessage(from, kon, image, { quoted: god, thumbnail: fakeimg4})
 break
 case 'keta':
 reply(mess.wait)
-hai = (`https://api.dapuhy.ga/api/nsfw/nsfwcumsluts?apikey=R-BOT`)
+hai = (`https://hardianto-chan.herokuapp.com/api/anime/random?nsfw=keta&apikey=hardianto`)
 kon = await getBuffer(hai)
 master.sendMessage(from, kon, image, { quoted: god, thumbnail: fakeimg4})
 break
@@ -1896,7 +1899,7 @@ master.sendMessage(from, buffer, image, { quoted: god, thumbnail: fakeimg4})
 break
 //***MAKER***//
 case 'maker2d2': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} R-BOT`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} saya eka`)
 					makell = args.join(" ")
 					reply(mess.wait)
 					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/maker2?text=${makell}&apikey=${xchillds}`)
@@ -1904,7 +1907,7 @@ case 'maker2d2':
 					master.sendMessage(from, buffer1, image, {quoted: god, thumbnail: fakeimg4})
 					break
 		case 'maker2d3': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} R-BOT`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} saya eka`)
 					makell = args.join(" ")
 					reply(mess.wait)
 					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/maker3?text=${makell}&apikey=${xchillds}`)
@@ -1912,7 +1915,7 @@ case 'maker2d2':
 					master.sendMessage(from, buffer1, image, {quoted: god, thumbnail: fakeimg4})
 					break
 		case 'maker2d4': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} R-BOT`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} saya eka`)
 					makell = args.join(" ")
 					reply(mess.wait)
 					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/maker4?text=${makell}&apikey=${xchillds}`)
@@ -1920,7 +1923,7 @@ case 'maker2d2':
 					master.sendMessage(from, buffer1, image, {quoted: god, thumbnail: fakeimg4})
 					break
 			case 'maker3d': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} R-BOT`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} saya eka`)
 					makell = body.slice(8)
 					reply(mess.wait)
 					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/maker3d?text=${makell}&apikey=${xchillds}`)
@@ -1928,7 +1931,7 @@ case 'maker2d2':
 					master.sendMessage(from, buffer1, image, {quoted: god, thumbnail: fakeimg4})
 					break
 			case 'maker3d2': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} R-BOT`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} saya eka`)
 					makell = args.join(" ")
 					reply(mess.wait)
 					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/maker3d/no2?text=${makell}&apikey=${xchillds}`)
@@ -1936,7 +1939,7 @@ case 'maker2d2':
 					master.sendMessage(from, buffer1, image, {quoted: god, thumbnail: fakeimg4})
 					break
 			case 'maker3d3': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} R-BOT`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} saya eka`)
 					makell = args.join(" ")
 					reply(mess.wait)
 					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/maker3d/no3?text=${makell}&apikey=${xchillds}`)
@@ -1944,7 +1947,7 @@ case 'maker2d2':
 					master.sendMessage(from, buffer1, image, {quoted: god, thumbnail: fakeimg4})
 					break
 			case 'maker3d4': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} R-BOT`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} saya eka`)
 					makell = args.join(" ")
 					reply(mess.wait)
 					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/maker3d/no4?text=${makell}&apikey=${xchillds}`)
@@ -1952,7 +1955,7 @@ case 'maker2d2':
 					master.sendMessage(from, buffer1, image, {quoted: god, thumbnail: fakeimg4})
 					break
 			case 'transformer': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} R-BOT`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} saya eka`)
 					makell = args.join(" ")
 					reply(mess.wait)
 					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/maker/special/transformer?text=${makell}&apikey=${xchillds}`)
@@ -1981,7 +1984,7 @@ case 'maker2d2':
 					master.sendMessage(from, buffer1, image, {quoted: god, thumbnail: fakeimg4})
 					break
 			case 'coffeecup': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} R-BOT`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} saya eka`)
 					makell = args.join(" ")
 					reply(mess.wait)
 					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/textmaker/senja?text=${makell}&theme=coffee-cup&apikey=${xchillds}`)
@@ -1989,7 +1992,7 @@ case 'maker2d2':
 					master.sendMessage(from, buffer1, image, {quoted: god, thumbnail: fakeimg4})
 					break
 			case 'coffeecup2': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} R-BOT`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} saya eka`)
 					makell = args.join(" ")
 					reply(mess.wait)
 					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/textmaker/senja?text=${makell}&theme=coffee-cup2&apikey=${xchillds}`)
@@ -1997,23 +2000,23 @@ case 'maker2d2':
 					master.sendMessage(from, buffer1, image, {quoted: god, thumbnail: fakeimg4})
 					break
 			case 'neon': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} R-BOT`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} saya eka`)
 					makell = args.join(" ")
 					reply(mess.wait)
-					anu = await fetchJson(`https://api.zeks.me/api/bneon?apikey=apivinz&text=${makell}`)
+					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/textmaker/metallic?text=${makell}&theme=neon&apikey=${xchillds}`)
 					buffer1 = await getBuffer(anu.result.url)
 					master.sendMessage(from, buffer1, image, {quoted: god, thumbnail: fakeimg4})
 					break
             case 'glow': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} R-BOT`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} saya eka`)
 					makell = args.join(" ")
 					reply(mess.wait)
-					anu = await fetchJson(` https://api.zeks.me/api/glowtext?apikey=apivinz&text=${makell}`)
+					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/textmaker/metallic?text=${makell}&theme=glow&apikey=${xchillds}`)
 					buffer1 = await getBuffer(anu.result.url)
 					master.sendMessage(from, buffer1, image, {quoted: god, thumbnail: fakeimg4})
 					break
 			case 'summer': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} R-BOT`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} saya eka`)
 					makell = args.join(" ")
 					reply(mess.wait)
 					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/textmaker/alam?text=${makell}&theme=summer&apikey=${xchillds}`)
@@ -2021,7 +2024,7 @@ case 'maker2d2':
 					master.sendMessage(from, buffer1, image, {quoted: god, thumbnail: fakeimg4})
 					break
 			case 'flower': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} R-BOT`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} saya eka`)
 					makell = args.join(" ")
 					reply(mess.wait)
 					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/textmaker/alam?text=${makell}&theme=flower&apikey=${xchillds}`)
@@ -2029,7 +2032,7 @@ case 'maker2d2':
 					master.sendMessage(from, buffer1, image, {quoted: god, thumbnail: fakeimg4})
 					break
 			case 'burn': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} R-BOT`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} saya eka`)
 					makell = args.join(" ")
 					reply(mess.wait)
 					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/textmaker/random?text=${makell}&theme=text-burn&apikey=${xchillds}`)
@@ -2037,7 +2040,7 @@ case 'maker2d2':
 					master.sendMessage(from, buffer1, image, {quoted: god, thumbnail: fakeimg4})
 					break
 			case 'quote': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} R-BOT`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} saya eka`)
 					makell = args.join(" ")
 					reply(mess.wait)
 					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/textmaker/random?text=${makell}&theme=art-quote&apikey=${xchillds}`)
@@ -2045,7 +2048,7 @@ case 'maker2d2':
 					master.sendMessage(from, buffer1, image, {quoted: god, thumbnail: fakeimg4})
 					break
 			case 'wooden': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} R-BOT`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} saya eka`)
 					makell = args.join(" ")
 					reply(mess.wait)
 					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/textmaker/roses?text=${makell}&theme=wooden-boarch&apikey=${xchillds}`)
@@ -2053,40 +2056,137 @@ case 'maker2d2':
 					master.sendMessage(from, buffer1, image, {quoted: god, thumbnail: fakeimg4})
 					break
 			case 'golden': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} R-BOT`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} saya eka`)
 					makell = args.join(" ")
 					reply(mess.wait)
 					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/textmaker/roses?text=${makell}&theme=golden&apikey=${xchillds}`)
 					buffer1 = await getBuffer(anu.result.url)
 					master.sendMessage(from, buffer1, image, {quoted: god, thumbnail: fakeimg4})
 					break				 
-case 'nulis':
-if (!q) return reply('Textnya mana gan?')
-reply(mess.wait)
-kon = (`https://api.zeks.me/api/nulis?apikey=apivinz&text=${q}`)
-anu = await getBuffer(kon)
-master.sendMessage(from, anu, image, { quoted: god, thumbnail: fakeimg4 })
-break
+				            	case 'nuliskiri': 			 
+									if (args.length < 1) return reply('mau nulis apa?')
+									reply(mess.wait)
+									const tulisan = q
+									const splitText = tulisan.replace(/(\S+\s*){1,9}/g, '$&\n')
+									const fixHeight = splitText.split('\n').slice(0, 31).join('\n')
+									spawn('convert', [
+									'./media/nulis/images/buku/sebelumkiri.jpg',
+									'-font',
+									'./media/nulis/font/Indie-Flower.ttf',
+									'-size',
+									'960x1280',
+									'-pointsize',
+									'22',
+									'-interline-spacing',
+									'2',
+									'-annotate',
+									'+140+153',
+									fixHeight,
+									'./media/nulis/images/buku/setelahkiri.jpg'
+									])
+									.on('error', () => reply(mess.error))
+									.on('exit', () => {
+										master.sendMessage(from, fs.readFileSync('./media/nulis/images/buku/setelahkiri.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: god, caption:'Jangan sampai ketahuan'})									 
+			  					        break
+					        	case 'nuliskanan': 
+						            if (args.length < 1) return reply('mau nulis apa?')
+									reply(mess.wait)
+									const tulisan = q
+									const splitText = tulisan.replace(/(\S+\s*){1,9}/g, '$&\n')
+									const fixHeight = splitText.split('\n').slice(0, 31).join('\n')
+									spawn('convert', [
+									'./media/nulis/images/buku/sebelumkanan.jpg',
+									'-font',
+									'./media/nulis/font/Indie-Flower.ttf',
+									'-size',
+									'960x1280',
+									'-pointsize',
+									'23',
+									'-interline-spacing',
+									'2',
+									'-annotate',
+									'+128+129',
+									fixHeight,
+									'./media/nulis/images/buku/setelahkanan.jpg'
+									])
+									.on('error', () => reply(mess.error))
+									.on('exit', () => {
+										master.sendMessage(from, fs.readFileSync('./media/nulis/images/buku/setelahkanan.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: god, caption:'Jangan sampai ketahuan'})																		 
+									break
+						        case 'foliokiri': 
+						            if (args.length < 1) return reply('mau nulis apa?')
+									reply(mess.wait)
+									const tulisan = q
+									const splitText = tulisan.replace(/(\S+\s*){1,13}/g, '$&\n')
+									const fixHeight = splitText.split('\n').slice(0, 38).join('\n')
+									spawn('convert', [
+									'./media/nulis/images/folio/sebelumkiri.jpg',
+									'-font',
+									'./media/nulis/font/Indie-Flower.ttf',
+									'-size',
+									'1720x1280',
+									'-pointsize',
+									'23',
+									'-interline-spacing',
+									'4',
+									'-annotate',
+									'+48+185',
+									fixHeight,
+									'./media/nulis/images/folio/setelahkiri.jpg'
+									])
+									.on('error', () => reply(mess.error))
+									.on('exit', () => {
+										master.sendMessage(from, fs.readFileSync('./media/nulis/images/folio/setelahkiri.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: god, caption:'Jangan sampai ketahuan'})										
+										})
+									}
+									break
+						case 'foliokanan': 
+						         	if (args.length < 1) return reply('mau nulis apa?')
+									reply(mess.wait)
+									const tulisan = q
+									const splitText = tulisan.replace(/(\S+\s*){1,13}/g, '$&\n')
+									const fixHeight = splitText.split('\n').slice(0, 38).join('\n')
+									spawn('convert', [
+									'./media/nulis/images/folio/sebelumkanan.jpg',
+									'-font',
+									'./media/nulis/font/Indie-Flower.ttf',
+									'-size',
+									'960x1280',
+									'-pointsize',
+									'23',
+									'-interline-spacing',
+									'3',
+									'-annotate',
+									'+89+190',
+									fixHeight,
+									'./media/nulis/images/folio/setelahkanan.jpg'
+									])
+									.on('error', () => reply(mess.error))
+									.on('exit', () => {
+										master.sendMessage(from, fs.readFileSync('./media/nulis/images/folio/setelahkanan.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: god, caption:'Jangan sampai ketahuan'})										
+									})
+									}
+									break
 //*****asupan****//
 case '+62':
 reply(mess.wait)
-sendMediaURL(from,`https://dapuhy-api.herokuapp.com/api/asupan/asupan?apikey=R-BOT`)
+sendMediaURL(from,`https://dapuhy-api.herokuapp.com/api/asupan/asupan?apikey=ItsMeVean`)
 break
 case 'bocil':
 reply(mess.wait)
-sendMediaURL(from,`https://dapuhy-api.herokuapp.com/api/asupan/asupanbocil?apikey=R-BOT`)
+sendMediaURL(from,`https://dapuhy-api.herokuapp.com/api/asupan/asupanbocil?apikey=ItsMeVean`)
 break
 case 'ukhti':
 reply(mess.wait)
-sendMediaURL(from,`https://dapuhy-api.herokuapp.com/api/asupan/asupanukhty?apikey=R-BOT`)
+sendMediaURL(from,`https://dapuhy-api.herokuapp.com/api/asupan/asupanukhty?apikey=ItsMeVean`)
 break
 case 'rikagusriani':
 reply(mess.wait)
-sendMediaURL(from,`https://dapuhy-api.herokuapp.com/api/asupan/asupanrikagusriani?apikey=R-BOT`)
+sendMediaURL(from,`https://dapuhy-api.herokuapp.com/api/asupan/asupanrikagusriani?apikey=ItsMeVean`)
 break
 case 'ghea':
 reply(mess.wait)
-sendMediaURL(from,`https://dapuhy-api.herokuapp.com/api/asupan/asupanghea?apikey=R-BOT`)
+sendMediaURL(from,`https://dapuhy-api.herokuapp.com/api/asupan/asupanghea?apikey=ItsMeVean`)
 break
 
 //***OTHERR***//
@@ -2867,7 +2967,7 @@ break
 					} else {
 						reply('enable untuk mengaktifkan, disable untuk menonaktifkan')
 					}
-					break 			            
+					break 
            case 'tag':
 			if (args.length < 1) return reply(`Penggunaan ${prefix}tag 62xnxx`)
             var nomqm = `${body.slice(5)}@s.whatsapp.net`
@@ -2904,7 +3004,7 @@ break
 			promote = god.message.extendedTextMessage.contextInfo.participant
 		    master.groupMakeAdmin(from, [promote])
 						reply('Sukses promote member')
-						break			
+						break
 				case 'linkgrup':
 				case 'linkgroup':
 				case 'linkgc':
@@ -2934,7 +3034,7 @@ break
 						teks += `╠➥ @${mem.jid.split('@')[0]} wa.me/${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
-					mentions(`╔═══✪ Tag By *${pushname}* ✪══`+ teks +'╚═══〘 𝐑-𝐁𝐎𝐓 〙═══', members_id, true)
+					mentions(`╔═══✪ Tag By *${pushname}* ✪══`+ teks +'╚═══〘 TOBI BOT 〙═══', members_id, true)
 					break
 					case 'opengc':
 					if (!isGroup) return reply(mess.only.group)
